@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatble" content="ie=edge">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>Users</title>            
+        <link rel="stylesheet" href="../dist/css/main.css">
+        <link rel="shortcut icon" href="../img/user.png"/>
+    </head>
+    <body>
+       <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item current">
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        </header>
+        <main id="list">
+            <h2 class="lg-heading">
+                Users  <span class="text-secondary"> Datas </span> 
+            </h2>
+             <div class="login-box"></div>
+                <div class="form-busca form-busca-off">
+                    <form class="form-busca-site">
+                        <input id="search" class="btn-text-top buscar2" type="text" name="txtsearch" placeholder="Buscar e-mail">
+                    </form>
+                </div>
+            </div>
+        <div class="diceList">
+             <div class="item">
+                 <a href="#">
+                     <img src="../img/name.jpg" alt="nome">
+                 </a>
+                 <div class="container">
+                    <h4><b>Nomes:</b></h4>
+                    <p id="nome"></p> 
+                 </div>              
+             </div>
+             <div class="item">
+                <a href="#">
+                    <img src="../img/username.jpg" alt="username">
+                </a>
+                <div class="container">
+                    <h4><b>UsersName:</b></h4> 
+                    <p id="userName"></p> 
+                 </div>  
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="../img/email.png" alt="email">
+                </a>
+                <div class="container">
+                    <h4><b>Filtrar e-mails</b></h4> 
+                    <table id="email">
+                        
+                    </table>
+                 </div> 
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="../img/phone.jpg" alt="telefone">
+                </a>
+                <div class="container">
+                    <h4><b>Cels:</b></h4> 
+                    <p id="celular"></p>  
+                 </div> 
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="../img/website.jpg" alt="website">
+                </a>
+                <div class="container">
+                    <h4><b>Websites:</b></h4> 
+                    <p id="webSite"></p>  
+                 </div> 
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img  id="fotoEndereco" src="../img/endereco.jpg" alt="endereco">
+                </a>
+                <div class="container">
+                    <h4><b>Endereços:</b></h4> 
+                    <p id="endereco"></p>  
+                 </div> 
+            </div>
+          
+        </div>
+        </main>
+        <footer id="main-footer">
+             &copy; Users Datas
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="../js/requisicao.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

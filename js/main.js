@@ -1,40 +1,31 @@
-$(document).ready(function(){
-
-    var nome =  $('#nome').val();
-    var urlApi = "http://jsonplaceholder.typicode.com/users";
-
-    $.ajax({
-        url: urlApi,
-        type:"get",
-        dataType:"json",
-        success:function(conteudo){
-
-            for(let i = 0; i <= conteudo.length; i++){
-                
-                console.log(conteudo[i]);
-                $('#nome').append(i + ") " + conteudo[i].name + "<br>");
-                $('#userName').append(i + ") " + conteudo[i].username + "<br>");     
-                $('#email').append( "<tr> <td>"+ conteudo[i].email + " </tr> </td>");
-                $("table#email tr").addClass("linhas");
-                $('#celular').append(i + ") " + conteudo[i].phone + "<br>");
-                $('#webSite').append(i + ") " + conteudo[i].website + "<br>");
-                $('#endereco').append(i + ") Rua: " + conteudo[i].address.city + " / Rua: " + conteudo[i].address.street +
-                "/ " + conteudo[i].address.suite  + "<br>" + " Cep: " + conteudo[i].address.zipcode + "<br>" );
-            }
-
-        },
-        error:function(erro){
-            console.log(erro);
-        }
-    })
+const menuBtn = document.querySelector('.menu-btn');
+const menu= document.querySelector('.menu');
+const menuNav = document.querySelector('.menu-nav');
+const menuBranding = document.querySelector('.menu-branding');
+const navItems = document.querySelectorAll('.nav-item');
 
 
-  //busca
-  function busca(value,targetSelector){
-    $(targetSelector).show();
-    $(targetSelector+':not(:contains("'+ value +'"))').hide();
+let showMenu = false;
+
+menuBtn.addEventListener('click', toggleeMenu);
+
+function toggleeMenu(){
+    if(!showMenu){
+        menuBtn.classList.add('close');
+        menu.classList.add('show');
+        menuNav.classList.add('show');
+        menuBranding.classList.add('show');
+        navItems.forEach(item => item.classList.add('show'));
+
+        showMenu = true;
+
+    }else{
+        menuBtn.classList.remove('close');
+        menu.classList.remove('show');
+        menuNav.classList.remove('show');
+        menuBranding.classList.remove('show');
+        navItems.forEach(item => item.classList.remove('show'));
+
+        showMenu = false;
+    }
 }
-    $('#search').keyup(function () {
-    busca($(this).val(), '.linhas');
-    })
-});

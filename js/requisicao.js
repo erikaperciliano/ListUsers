@@ -10,7 +10,7 @@ $(document).ready(function(){
         success:function(conteudo){
 
             for(let i = 0; i <= conteudo.length; i++){
-                
+
                 console.log(conteudo[i]);
                 $('#nome').append(i + ") " + conteudo[i].name + "<br>");
                 $('#userName').append(i + ") " + conteudo[i].username + "<br>");     
